@@ -1,23 +1,84 @@
 aid: bettertrucks
+
 name: Bettertrucks
-description: 'Bettertrucks is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Better Trucks is a regional, last‑mile delivery platform that provides rapid residential parcel delivery for shippers, carriers,
+  freight operators and drivers. The company leverages technology to minimize stops, improve efficiency, and offer same‑day, next‑day, two‑day,
+  and two‑hour delivery options. Founded in 2019, Better Trucks serves retailers seeking to meet rising consumer expectations for fast, reliable
+  shipping across the United States.
+
 url: https://raw.githubusercontent.com/api-evangelist/bettertrucks/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
+- Logistics
+- Delivery
+- Transportation
+- API
+- Technology
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bettertrucks-hosts.yml
+- type: Vendors
+  url: vendors/bettertrucks-vendors.yml
+- type: StatusPage
+  url: https://status.bettertrucks.com/
+- type: DomainSecurity
+  url: security/bettertrucks-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/bettertrucks
+  url: https://www.bettertrucks.com
+- type: Blog
+  url: https://www.bettertrucks.com/blog
+- type: Documentation
+  url: https://www.bettertrucks.com/resource-center
+- type: GettingStarted
+  url: https://www.bettertrucks.com/about-us
+- type: Support
+  url: https://www.bettertrucks.com/support
+- type: Contact
+  url: https://www.bettertrucks.com/contact
+- type: PrivacyPolicy
+  url: https://www.bettertrucks.com/privacy-policy/
+- type: TermsOfService
+  url: https://www.bettertrucks.com/terms-conditions/
+
+apis:
+- name: Better Trucks API
+  description: Better Trucks provides a delivery platform API (no public machine‑readable contract found).
+  humanURL: https://www.bettertrucks.com/resource-center
+  baseURL: null
+  aid: bettertrucks:better-trucks-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Docs are served as JavaScript‑rendered pages, preventing machine‑readable contract discovery.
+  evidence:
+  - url: https://www.bettertrucks.com/resource-center
+    status: 200
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

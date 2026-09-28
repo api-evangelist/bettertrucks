@@ -1,0 +1,12 @@
+generated: '2026-09-28'
+method: probed
+source: "https://www.bettertrucks.com/privacy-policy/"
+signals:
+  data_retention:
+    evidence:
+      - source: "https://www.bettertrucks.com/privacy-policy/"
+        http_status: 200
+        fetched: "/tmp/bt_privacy.html"
+        quote: "Your personal information will not be stored for longer than is necessary for which it was collected or as required under applicable retention policies or practices, or as otherwise may be permitted or required in accordance with applicable law."
+        section: "RETENTION OF YOUR INFORMATION"
+        note: "States that personal data is retained only as long as necessary or required by law."
